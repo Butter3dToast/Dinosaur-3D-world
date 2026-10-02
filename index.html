@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mesozoic World</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<canvas id="scene" aria-label="Rotating 3D globe of the Mesozoic world"></canvas>
+<div id="loading">Growing a planet…</div>
+
+<header id="top">
+  <div id="title" class="panel">
+    <h1>Mesozoic World</h1>
+    <div id="era-name"></div>
+    <p id="era-blurb"></p>
+  </div>
+  <div id="stats" class="panel" aria-live="polite">
+    <div class="stat"><b id="s-day">1</b><span>Day</span></div>
+    <div class="stat"><b id="s-adult">0</b><span>Adults</span></div>
+    <div class="stat"><b id="s-young">0</b><span>Young</span></div>
+    <div class="stat"><b id="s-nest">0</b><span>Nests</span></div>
+  </div>
+</header>
+
+<aside id="info" class="panel" hidden></aside>
+
+<footer id="bottom">
+  <div id="dock" class="panel">
+    <div id="strata" role="group" aria-label="Choose a period"></div>
+    <div id="ticks"><span>252 million years ago</span><span>201</span><span>145</span><span>66</span></div>
+    <div id="chips" role="group" aria-label="Animals in this period"></div>
+    <div id="controls">
+      <span id="hint">Drag to turn the globe, scroll or pinch to zoom, tap an animal to learn about it.</span>
+      <div id="speed" role="group" aria-label="Time speed">
+        <button class="play" data-s="0" aria-label="Pause">❚❚</button>
+        <button data-s="0.5">½×</button>
+        <button data-s="1" aria-pressed="true">1×</button>
+        <button data-s="2">2×</button>
+        <button data-s="4">4×</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
